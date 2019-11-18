@@ -11,7 +11,6 @@ window.onload = () => {
     let screenshot = document.querySelector("a-scene").components.screenshot;
     
     button.addEventListener('click', () => {
-        loader.style.visibility = 'visible';
         let frame = captureVideoFrame("video", "png");
         let aScene = screenshot.getCanvas('perspective');
         aScene = resizeCanvas(aScene, frame.width, frame.height)
